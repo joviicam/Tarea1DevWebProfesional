@@ -3,6 +3,7 @@ import App from './App.vue'
 
 import './assets/main.css'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import router from './router/index'
 
 // Import Bootstrap and BootstrapVue CSS files (order is important)
 import 'bootstrap/dist/css/bootstrap.css'
@@ -14,5 +15,6 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
 new Vue({
+  router, // <- ésta linea es la que se modifica.
   render: (h) => h(App)
 }).$mount('#app')
